@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--Style css-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Icon Bootstap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="">
+    <div class="bg-secondary text-center text-light p-2">
+        FREE SHIPPING ON ORDERS OVER 50$
+    </div>
+    <!--header-->
+    <div class="container">
+        <header class="pt-2">
+            <nav class="navbar navbar-dark d-flex">
+                <div class="container">
+                    <ul class="navbar-nav d-none d-lg-flex flex-row fw-bold">
+                        <li class="nav-item pe-4">
+                            <a class="nav-link active text-secondary" aria-current="page" href="page/shop.html">Shop</a>
+                        </li>
+                        <li class="nav-item pe-4 ms-5">
+                            <a class="nav-link text-secondary" href="page/blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item pe-4 ms-5">
+                            <a class="nav-link text-secondary" href="page/sale.html">Sale</a>
+                        </li>
+                        <li class="nav-item pe-4 ms-5">
+                            <a class="nav-link text-secondary" href="page/contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <a class="navbar-brand text-dark border border-2 px-3 py-1 border-dark" href="index.html">LSP</a>
+                    <div class="d-flex justify-content-end">
+                        <div class="d-sm-none d-lg-block d-none border-bottom">
+                            <button class="border-0 bg-white text-dark"><i class="bi bi-search"></i></button>
+                            <input type="text" placeholder="Search..." class="border-0">
+                        </div>
+                        <div class="mx-3 d-sm-none d-lg-block d-none"><i class="bi bi-person-circle me-2 fs-5"></i>Login
+                        </div>
+                        <div class=""><i class="bi bi-gift ms-2 fs-4 me-2"></i></div>
+                        <i class="bi bi-bag-heart fs-4 me-4" id="cart-icon"></i>
+                        <div class="cart position-fixed shadow-sm bg-secondary">
+                            <div class="cart-title pt-4">
+                                <div class="text-center fs-4 fw-bold">Your cart</div>
+                                <!--Content-->
+                                <div class="cart-content">
+                                    <div class="cart-box">
+                                        <img src="assets/img/product1.jpg" alt="" class="" style="width: 100px;height: 100px;
+                                      object-fit: contain; padding: 10px;">
+                                        <div class="detail-box pt-1" style="display: grid;row-gap: 0.5rem;">
+                                            <div class="cart-product-title text-start fs-6 fw-bold">
+                                                T-SHIRT
+                                            </div>
+                                            <div class="cart-price text-start fs-6 pt-1 fw-bold">$30</div>
+                                            <input type="number" name="" id="" value="1"
+                                                style="border: 1px solid;width: 2.4rem;text-align: center;font-size: 1rem;">
+                                        </div>
+
+                                        <!--Remove Cart-->
+                                        <i class="bi bi-trash pt-4 mt-3 text-danger"
+                                            style="font-size: 20px; cursor: pointer;"></i>
+                                    </div>
+                                </div>
+                                <!--Total-->
+                                <div class="total d-flex justify-content-end"
+                                    style="margin-top: 1.5rem;border-top: 1px solid;">
+                                    <div class="total-title" style="font-size: 1rem;font-weight: 600;">Total</div>
+                                    <div class="total-price ms-2" style="margin-left: 0.5rem;">$0</div>
+                                </div>
+                                <!--Buy Button-->
+                                <button type="button" class="btn-buy"
+                                    style="display: flex;margin: 1.5rem auto 0 auto;padding: 6px 20px;border: none;cursor: pointer;">Buy
+                                    Now</button>
+                                <!--Cart close-->
+                                <button type="button" class="btn"><i class="bi bi-x position-absolute text-danger"
+                                        id="close-cart"
+                                        style="top: 1rem;right: 0.8rem; font-size: 2rem;cursor: pointer;"></i></button>
+                            </div>
+                        </div>
+                        <button class="navbar-toggler d-lg-none bg-secondary" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">LSP</h5>
+
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="page/shop.html">Shop</a>
+                            </li>
+                            <li class="nav-item pe-4">
+                                <a class="nav-link" href="page/blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item pe-4">
+                                <a class="nav-link" href="page/sale.html">Sale</a>
+                            </li>
+                            <li class="nav-item pe-4">
+                                <a class="nav-link" href="page/contact.html">Contact</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+    </div>
+    </nav>
+    </header>
+    </div>
+    <div class="wrapper bg-secondary">
+        <div class="image">
+            <img src="assets/img/banner.png" alt="" class="img-fluid w-100">
+            <div class="content text-white">
+                <p class="fs-sm-5 m-0">HANDCRAFTED ORGANIC SOAPS & CANDLES</p>
+                <p class="fs-sm-6 m-0">JUST LIKE NATURE
+                    INTENDED</p>
+                <div class="pt-3 pt-lg-5">
+                    <a href="page/sale.html"><button type="button" class="border-0 px-3 py-1">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pt-5">
+        <h2 class="text-center">SHOP OUR FAVORITES</h2>
+        <div class="row pt-5" style="background-size: 500px;">
+            <div class="col-lg-6 col-md-6 d-flex position-relative pt-5">
+                <img src="assets/img/product1.jpg" alt="" class="w-50 border-white border" style="z-index: 1;">
+                <img src="assets/img/bgc.png" alt="" class="w-50 position-absolute"
+                    style="z-index: 0; top: 10px; right: 110px;">
+            </div>
+            <div class="col-lg-6 col-md-6 pt-5">
+                <div class="container-fluid m-0 ps-4 w-lg-50 pe-lg-5 me-lg-5">
+                    <h4 class="">
+                        PROBIOTIC <br>CLEANSING BARS</h4>
+                    <p class="me-lg-5 pe-lg-5">I'm a paragraph. Click here to add your own text and edit me.It's easy.
+                        Just click
+                        “Edit Text” or
+                        double click me to add your own content and make changes to the font. I'm a great place for you
+                        to tell a
+                        story
+                        and let your users know a little more about you.</p>
+                    <button type="button" class="px-3 py-1">Find Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pt-lg-5">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="container text-center">
+                    <h2 class="pt-5">NATURE’S ESSENCE <br>
+                        SCENTED CANDLES</h2>
+                    <p class="mx-lg-5 px-lg-5">I'm a paragraph. Click here to add your own text and edit me.It’s easy.
+                        Just
+                        click “Edit Text” or double
+                        click me to add your own content and make changes to the font. I’m a great place for you to tell
+                        a
+                        story and
+                        let your users know a little more about you.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <video class="w-100" autoplay loop muted>
+                    <source src="assets/video/Sale.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!--Slide Products-->
+    <swiper-container class="mySwiper" init="false" autoplay-delay="2500">
+        <swiper-slide>
+            <div class="card position-relative">
+                <img src="assets/img/product2.jpg" style="background-color: azure;" alt="..." class="product-img">
+                <div class="card-body">
+                    <h2 class="product-title fs-5">Headpones</h2>
+                    <span class="price">$60</span>
+                    <i class="bi bi-cart4 px-2 py-1 position-absolute bg-secondary text-light"
+                        style="cursor: pointer; bottom: 0;right: 0;"></i>
+                    <button type="button" id="btn-add"
+                        class="bi bi-cart4 px-2 py-1 position-absolute bg-secondary text-light"
+                        style="cursor: pointer; bottom: 0;right: 0;">Add to cart</button>
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="card position-relative">
+                <img src="assets/img/product3.jpg" style="background-color: azure;" alt="..." class="product-img">
+                <div class="card-body">
+                    <h2 class="product-title fs-5">Jacket</h2>
+                    <span class="price">$60</span>
+                    <i class="bi bi-cart4 px-2 py-1 position-absolute bg-secondary text-light"
+                        style="cursor: pointer; bottom: 0;right: 0;"></i>
+                    <button type="button" id="btn-add"
+                        class="bi bi-cart4 px-2 py-1 position-absolute bg-secondary text-light"
+                        style="cursor: pointer; bottom: 0;right: 0;">Add to cart</button>
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="card position-relative">
+                <img src="assets/img/product4.jpg" style="background-color: azure;" alt="..." class="product-img">
+                <div class="card-body">
+                    <h2 class="product-title fs-5">Bottle</h2>
+                    <span class="price">$60</span>
+                    <i class="bi bi-cart4 px-2 py-1 position-absolute bg-secondary text-light"
+                        style="cursor: pointer; bottom: 0;right: 0;"></i>
+                    <button type="button" id="btn-add"
+                        class="bi bi-cart4 px-2 py-1 position-absolute bg-secondary text-light"
+                        style="cursor: pointer; bottom: 0;right: 0;">Add to cart</button>
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="card position-relative">
+                <img src="assets/img/product5.jpg" style="background-color: azure;" alt="..." class="product-img">
+                <div class="card-body">
+                    <h2 class="product-title fs-5">glasses</h2>
+                    <span class="price">$60</span>
+                    <i class="bi bi-cart4 px-2 py-1 position-absolute bg-secondary text-light"
+                        style="cursor: pointer; bottom: 0;right: 0;"></i>
+                    <button type="button" id="btn-add"
+                        class="bi bi-cart4 px-2 py-1 position-absolute bg-secondary text-light"
+                        style="cursor: pointer; bottom: 0;right: 0;">Add to cart</button>
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="card position-relative">
+                <img src="assets/img/product6.jpg" style="background-color: azure;" alt="..." class="product-img">
+                <div class="card-body">
+                    <h2 class="product-title fs-5">Hat</h2>
+                    <span class="price">$60</span>
+                    <i class="bi bi-cart4 px-2 py-1 position-absolute bg-secondary text-light"
+                        style="cursor: pointer; bottom: 0;right: 0;"></i>
+                    <button type="button" id="btn-add"
+                        class="bi bi-cart4 px-2 py-1 position-absolute bg-secondary text-light"
+                        style="cursor: pointer; bottom: 0;right: 0;">Add to cart</button>
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="card position-relative">
+                <img src="assets/img/product7.jpg" style="background-color: azure;" alt="..." class="product-img">
+                <div class="card-body">
+                    <h2 class="product-title fs-5">Bag</h2>
+                    <span class="price">$60</span>
+                    <i class="bi bi-cart4 px-2 py-1 position-absolute bg-secondary text-light"
+                        style="cursor: pointer; bottom: 0;right: 0;"></i>
+                    <button type="button" id="btn-add"
+                        class="bi bi-cart4 px-2 py-1 position-absolute bg-secondary text-light"
+                        style="cursor: pointer; bottom: 0;right: 0;">Add to cart</button>
+                </div>
+            </div>
+        </swiper-slide>
+    </swiper-container>
+    <!--footer-->
+    <footer id="footer" class="bg-white">
+        <div class="footer-top pt-5 border-top shadow-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3 class="d-block border border-2 border-dark text-center fs-2"
+                            style="margin-left: 90px; margin-right: 90px;">LSP
+                        </h3>
+                        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                            <a href="" class="twitter bg-secondary text-light d-inline-block">
+                                <i class="fa-brands fa-twitter"></i></a>
+                            <a href="" class="facebook bg-secondary text-light d-inline-block">
+                                <i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="" class="instagram bg-secondary text-light d-inline-block">
+                                <i class="fa-brands fa-instagram"></i></a>
+                            <a href="" class="google-plus bg-secondary text-light d-inline-block">
+                                <i class="fa-brands fa-skype"></i></a>
+                            <a href="" class="linkedin bg-secondary text-light d-inline-block">
+                                <i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4 class="fs-4">Information</h4>
+                        <ul>
+                            <li><a href="page/shop.html">Shop</a></li>
+                            <li><a href="page/blog.html">Block</a></li>
+                            <li><a href="page/sale.html">Sale</a></li>
+                            <li><a href="page/contact.html">Contact</a></li>
+                        </ul>
+                        <h4 class="fs-4 pt-3">HELP</h4>
+                        <ul>
+                            <li><a href="#">TERMS & CONDITIONS</a></li>
+                            <li><a href="#">PRIVACY POLICY </a></li>
+                            <li><a href="#">SHIPPING & RETURNS</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4 class="fs-4">LSP</h4>
+                        <ul>
+                            <li>
+                                <a href="#">OUR STORY</a>
+                            </li>
+                            <li>
+                                <a href="#">CONTACT US</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQ</a>
+                            </li>
+                        </ul>
+                        <h4 class="fs-4" style="padding-top: 55px;">CONTACT US</h4>
+                        <ul>
+                            <li>
+                                <a href="#">123-456-7890</a>
+                            </li>
+                            <li>
+                                <a href="#">INFO@MYSITE.COM</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Join Our Newsletter</h4>
+                        <p>
+                            Tamen quem nulla quae legam multos aute sint culpa legam noster
+                            magna
+                        </p>
+                        <form>
+                            <input type="email" name="email" />
+                            <input type="submit" value="Subscribe" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-3 bg-secondary">
+            <div class=" text-center text-md-start">
+                <div class="text-center text-light fs-6">
+                    © 2035 by LSP. Powered and secured by Lin
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!--Link to js-->
+    <script src="assets/javascritp/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <script>
+        const swiperEl = document.querySelector('swiper-container')
+        Object.assign(swiperEl, {
+            slidesPerView: 1,
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                },
+            },
+        });
+        swiperEl.initialize();
+    </script>
+</body>
+
+</html>
